@@ -11,4 +11,8 @@ contract SimpleToken is ERC20 {
     ) ERC20(_tokenName, _symbol) {
         _mint(msg.sender, _totalSupply);
     }
+
+    function burn(address owner, uint256 tokens) public {
+        _burn(owner, tokens);
+    }
 }
